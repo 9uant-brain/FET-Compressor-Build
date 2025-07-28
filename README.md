@@ -1,1 +1,2 @@
-# FET_COMP
+## Why I made this
+After finish building RAT2 project, I built and even bought more pedals. But still I didn't have a compressor pedal. Because it tend to be deprioritized, don't shape the sound dramatically. It just compress loud sound, while slightly boost quiet sound. I did think so. But, when I began to be hooked in Jimi Hendrix, I felt nessarity of compressor. Because his playing focus on sophiscated raw guitar tone. I could have bought cheap chinese pedals, but I decide to build my own. There are several reasons why it was decided that way. First, decent compressors are quite expensive even if they are china-made. I needed compressor which have attack/release control, for my 
