@@ -13,7 +13,7 @@ For these reasons (mostly due to cost-effectiveness), I decide to make a compres
 
 ## Circuit overview
 <p align='center'>
- <img scr=asset/sch.jpg>
+ <img scr='asset/sch.jpg'>
 </p>
 I like to describe a compressor this way:
 Imagine a helper sitting by the volume knob, watching the audio waveform just before it's played. If the signal gets too loud — above a certain threshold — he quickly turns the volume down.
