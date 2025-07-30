@@ -9,17 +9,21 @@ First, I wanted a compressor with attack and release controls to get a truly cle
 
 Second, I wanted a compressor versatile enough for both guitar and bass. For that, a dry/wet mix (also known as parallel compression) was essential. Bass guitars typically have very strong signals, and if a compressor isn’t designed specifically to handle them, it can cause a “pumping” effect. This happens when the compressor clamps down too aggressively on the signal and then releases, creating an audible swell or “pump.” By blending in some dry signal with the compressed tone, this effect can be reduced or avoided.
 
-For these reasons (mostly due to cost-effectiveness), I decide to make a compressor on my own.
+For these reasons (mostly due to cost-effectiveness), I decided to build a compressor myself. Then, I searched the internet for reference schematics and finally found one on 'pedalpcb.com'.
+
 
 ## Circuit overview
-<p align='center''>
+
+
+I like to describe a compressor this way: Imagine a helper sitting by the volume knob, watching the audio waveform just before it's played. If the signal gets too loud — above a certain threshold — he quickly turns the volume down.
+
+So, I can explain this schematic same way. I highlighted that section which is called as 'sidechain', I metaphored it as 'a helper'. It's the core section of compressors; you could even call it a compressor itself. I will focus on it in this chapter. And, let's look into schematic below.
+
+<p align='center'>
  <img src=asset/sch.jpg>
 </p>
 
-
-
-I like to describe a compressor this way:
-Imagine a helper sitting by the volume knob, watching the audio waveform just before it's played. If the signal gets too loud — above a certain threshold — he quickly turns the volume down.
-So, I can explain this schematic same way. I highlighted that section which is called as 'sidechain', I metaphored it as 'a helper'. It's the core section of compressors; you could even call it a compressor itself. I will focus on it in this chapter. 
-
+\\\ Maybe your first impression was 'this is quite complicated than RAT2.'. Because, essentially sidechain is detection and self feedback logic. I will explain it briefly.  
+----
+First, focus on IC2.1. Its output spilit into two path. One signal goes to audio out, another goes to sidechain. That signal determines basic intensity of compression. 
 
