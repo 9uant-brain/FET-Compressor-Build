@@ -23,7 +23,9 @@ So, I can explain this schematic same way. I highlighted that section which is c
  <img src=asset/sch.jpg>
 </p>
 
-""" Maybe your first impression was 'this is quite complicated than RAT2.'. Because, essentially sidechain is detection and self feedback logic. I will explain it briefly.  
+\\\\Maybe your first impression was 'this is quite complicated than RAT2.'. Because, essentially sidechain is detection and self feedback logic. I will explain it briefly.  
+
+
 ----
 First, focus on IC2.1. Its output spilit into two path. One signal goes to audio out, another goes to sidechain. That signal determines basic intensity of compression. 
 
