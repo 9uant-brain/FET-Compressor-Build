@@ -12,5 +12,11 @@ Second, I wanted a compressor versatile enough for both guitar and bass. For tha
 For these reasons (mostly due to cost-effectiveness), I decide to make a compressor on my own.
 
 ## Circuit overview
+<p align='center'>
+ <img scr=asset/sch.jpg>
+</p>
+I like to describe a compressor this way:
+Imagine a helper sitting by the volume knob, watching the audio waveform just before it's played. If the signal gets too loud — above a certain threshold — he quickly turns the volume down.
+So, I can explain this schematic same way. I highlighted that section which is called as 'sidechain', I metaphored it as 'a helper'. It's the core section of compressors; you could even call it a compressor itself. I will focus on it in this chapter. 
 
 
