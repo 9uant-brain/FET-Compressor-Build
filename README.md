@@ -12,7 +12,7 @@ Second, I wanted a compressor versatile enough for both guitar and bass. For tha
 For these reasons (mostly due to cost-effectiveness), I decide to make a compressor on my own.
 
 ## Circuit overview
-<p align='center'>
+<p align="center">
  <img scr='asset/sch.jpg'>
 </p>
 I like to describe a compressor this way:
