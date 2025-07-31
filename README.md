@@ -26,6 +26,5 @@ So, I can explain this schematic same way. I highlighted that section which is c
 \\\\Maybe your first impression was 'this is quite complicated than RAT2.'. Because, essentially sidechain is detection and self feedback logic. I will explain it briefly.  
 
 
-----
-First, focus on IC2.1. Its output spilit into two path. One signal goes to audio out, another goes to sidechain. That signal determines basic intensity of compression. 
+First, focus on IC2.1. Its output spilit into two path. One signal goes to audio out, another goes to sidechain. That signal strength determines basic intensity of compression. And, if you turn up the COMPRESS potentiometer, The IC's gain become stronger, so the singal compressed harder. Because ultimately, that signal controls FET gate. 
 
