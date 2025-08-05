@@ -26,7 +26,13 @@ So, I can explain this schematic same way. I highlighted that section which is c
 \\\\Maybe your first impression was 'this is quite complicated than RAT2.'. Because, essentially sidechain is detection and self feedback logic. I will explain it briefly.  
 
 
-First, focus on IC2.1. Its output spilit into two path. One signal goes to audio out, another goes to sidechain. That signal strength determines basic intensity of compression. And, if you turn up the COMPRESS potentiometer, The IC's gain become stronger, so the singal compressed harder. Because ultimately, that signal voltage controls FET gate. 
+First, focus on IC2.1. Its output spilit into two path. One signal goes to audio out, another goes to sidechain. That signal strength determines basic intensity of compression. And, if you turn up the COMPRESS potentiometer, The IC's gain become stronger, so the singal compressed harder. Because ultimately, that signal voltage controls FET gate. If this voltage gets higher, the FET's channel is opened wider as Vgs gets higher(getting closer to 0). This make audio signal weaker, because channel connects to GND.
 
 As you follow down the path, could see there is splited path. One goes to inverting opamp, another straght to D2. These paths are quite felt weird first time. After much thought, I figured out why it is shaped like that. It would be much better explained in diagram.
 
+<p align='center'>
+ <img src=asset/waveform.jpg>
+</p>
+Let's assume audio input is sinewave. Then sinewave also goes to sidechain path. That's waveform A. A inverted through inverting opamp, that's B. If B passed through diode, become C. As diodes allow to pass voltages above Voltage Forward, the singals below than VF are cut. Same thing happens on D, difference is A has been cut down instead of B. C and D merged into E because they meet at the node. And that signal goes to FET gate. 
+
+It works as kind of retifier. But, why this structure is needed? There is two reasons. First, lets assume that we control fet gate directly with waveform A. It will be compressed only upper side of singal. Because JFET open its channel only when Vgs getting lower than 0. As lower side means minus voltage, jfet will close the channel rather than open it. 
