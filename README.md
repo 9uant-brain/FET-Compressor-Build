@@ -42,7 +42,7 @@ It works as kind of retifier. But, why this structure is needed? First, lets ass
 
 Also, BAT43 diodes are used, not only for retifying but because they have lower VF. If VF was too high, most of signal gonna be cut. And FET only works when high signals come in.
 
-### Tine domian.
+### Time domian.
 
 <p align='center'>
  <img src=asset/attack.jpg>
