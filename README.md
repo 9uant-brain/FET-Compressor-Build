@@ -30,6 +30,8 @@ First, focus on IC2.1. Its output spilit into two path. One signal goes to audio
 
 As you follow down the path, could see there is splited path. One goes to inverting opamp, another straght to D2. These paths are quite felt weird first time. After much thought, I figured out why it is shaped like that. It would be much better explained in diagram.
 
+### Rectifying, Detecting
+
 <p align='center'>
  <img src=asset/waveform.jpg>
 </p>
