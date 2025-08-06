@@ -37,7 +37,6 @@ As you follow down the path, could see there is splited path. One goes to invert
 </p>
 Let's assume audio input is sinewave. Then sinewave also goes to sidechain path. That's waveform A. A inverted through inverting opamp, that's B. If B passed through diode, become C. As diodes allow to pass voltages above Voltage Forward, the singals below than VF are cut. Same thing happens on D, difference is A has been cut down instead of B. C and D merged into E because they meet at the node. And that signal goes to FET gate. 
 
-
 It works as kind of retifier. But, why this structure is needed? First, lets assume that we directly control fet gate with waveform A. It will compress(open channel) only upper side of singal. Because JFET open its channel only when Vgs getting lower than 0. As lower side means minus voltage, jfet will close the channel rather than open it. So, it's essential to convert waveform from A to E. 
 
 Also, BAT43 diodes are used, not only for retifying but because they have lower VF. If VF was too high, most of signal gonna be cut. And FET only works when high signals come in.
