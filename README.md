@@ -35,9 +35,23 @@ As you follow down the path, could see there is splited path. One goes to invert
 <p align='center'>
  <img src=asset/waveform.jpg>
 </p>
+
 Let's assume audio input is sinewave. Then sinewave also goes to sidechain path. That's waveform A. A inverted through inverting opamp, that's B. If B passed through diode, become C. As diodes allow to pass voltages above Voltage Forward, the singals below than VF are cut. Same thing happens on D, difference is A has been cut down instead of B. C and D merged into E because they meet at the node. And that signal goes to FET gate. 
 
 It works as kind of retifier. But, why this structure is needed? First, lets assume that we directly control fet gate with waveform A. It will compress(open channel) only upper side of singal. Because JFET open its channel only when Vgs getting lower than 0. As lower side means minus voltage, jfet will close the channel rather than open it. So, it's essential to convert waveform from A to E. 
 
 Also, BAT43 diodes are used, not only for retifying but because they have lower VF. If VF was too high, most of signal gonna be cut. And FET only works when high signals come in.
-  
+
+### Tine domian.
+
+<p align='center'>
+ <img src=asset/attack.jpg>
+</p>  
+
+Look at the scheamtic. I hightlighted some components. They are essential. Now, let's talk about time. Because 'attack','release' potentiometers are all about time. Technically, 'time constant'. 
+We discussed about how FET gate voltage is sourced, transformed. In this section, we discuss about how fast that voltage charged, discharged. 
+
+<p align='center'>
+ <img src=asset/constant.jpg>
+</p>  
+To make it clearer, I simplifed previous schematic. Resistance 'ATTACK' determines how fast charge C6. Resistance 'RELEASE' determines how fast discharge C6. If C6 was charged fast, quicker FET compresses signal.Because  These are core parameters of compressor. B
