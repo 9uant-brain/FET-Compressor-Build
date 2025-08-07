@@ -45,7 +45,7 @@ Also, BAT43 diodes are used, not only for retifying but because they have lower 
 ### Time domain
 
 <p align='center'>
- <img src=asset/attack.jpg width="40%" height="40%">
+ <img src=asset/attack.jpg width="14%" height="14%">
 </p>  
 
 Look at the scheamtic. I hightlighted some essential components. Then, let's talk about time. Because 'attack','release' potentiometers affect time. Technically, 'time constant'. 
