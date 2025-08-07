@@ -42,16 +42,16 @@ It works as kind of retifier. But, why this structure is needed? First, lets ass
 
 Also, BAT43 diodes are used, not only for retifying but because they have lower VF. If VF was too high, most of signal gonna be cut. And FET only works when high signals come in.
 
-### Time domian.
+### Time domain.
 
 <p align='center'>
  <img src=asset/attack.jpg>
 </p>  
 
-Look at the scheamtic. I hightlighted some components. They are essential. Now, let's talk about time. Because 'attack','release' potentiometers are all about time. Technically, 'time constant'. 
+Look at the scheamtic. I hightlighted some essential components. Then, let's talk about time. Because 'attack','release' potentiometers affect time. Technically, 'time constant'. 
 We discussed about how FET gate voltage is sourced, transformed. In this section, we discuss about how fast that voltage charged, discharged. 
 
 <p align='center'>
- <img src=asset/constant.jpg>
+ <img src=asset/constant.png> 
 </p>  
-To make it clearer, I simplifed previous schematic. Resistance 'ATTACK' determines how fast charge C6. Resistance 'RELEASE' determines how fast discharge C6. If C6 was charged fast, quicker FET compresses signal.Because  These are core parameters of compressor. B
+To make it clearer, I simplifed previous schematic. Resistance 'ATTACK' determines how fast charge C6. Resistance 'RELEASE' determines how fast discharge C6. If C6 was charged fast, quicker FET compresses signal. These are core parameters of compressor. For example, attack time means, "How fast we react to a spike". On the other side, release time means "How quickly we return to normal after the spike". I also give a sonical example, attack determines "How much let drum spike sound passes." Conversely, release determines "How fast its volume returns." If it returns fast, it will sound unnatural, if it returns slowly, it will affect next drum hit.
