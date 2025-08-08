@@ -54,4 +54,8 @@ We discussed about how FET gate voltage is sourced, transformed. In this section
 <p align='center'>
  <img src=asset/constant.png width="60%" height="60%"> 
 </p>  
-To make it clearer, I simplifed previous schematic. Resistance 'ATTACK' determines how fast charge C6. Resistance 'RELEASE' determines how fast discharge C6. If C6 was charged fast, quicker FET compresses signal. These are core parameters of compressor. For example, attack time means, "How fast we react to a spike". On the other side, release time means "How quickly we return to normal after the spike". I also give a sonical example, attack determines "How much let drum spike sound passes." Conversely, release determines "How fast its volume returns." If it returns fast, it will sound unnatural, if it returns slowly, it will affect next drum hit.
+To make it clearer, I simplifed previous schematic. Resistance 'ATTACK' determines how fast charge C6. Resistance 'RELEASE' determines how fast discharge C6. If C6 was charged fast, quicker FET compresses signal. 
+
+These are core parameters of compressor. For example, attack time means, "How fast we react to a spike". On the other side, release time means "How quickly we return to normal after the spike". I also give a sonical example, attack determines "How much let drum spike sound passes." 
+
+Conversely, release determines "How fast its volume returns." If it returns fast, it will sound unnatural(because it will make drum's volume be increased suddenly before it ends.), if it returns slowly, it will affect next drum hit(next drum hit will lose most of its power). 
