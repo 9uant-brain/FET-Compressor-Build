@@ -59,3 +59,9 @@ To make it clearer, I simplifed previous schematic. Resistance 'ATTACK' determin
 These are core parameters of compressor. For example, attack time means, "How fast we react to a spike". On the other side, release time means "How quickly we return to normal after the spike". I also give a sonical example, attack determines "How much let drum spike sound passes." 
 
 Conversely, release determines "How fast its volume returns." If it returns fast, it will sound unnatural(because it will make drum's volume be increased suddenly before it ends.), if it returns slowly, it will affect next drum hit(next drum hit will lose most of its power). 
+
+### JFET, the signal controller
+<p align='center'>
+ <img src=asset/fet.jpg width="14%" height="14%">
+</p>  
+This is last section of sidechain. It is no exaggeration to say that the other sections are for these JFETs. These JFET directly control audio signal. 
