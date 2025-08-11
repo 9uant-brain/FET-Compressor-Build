@@ -23,12 +23,11 @@ So, I can explain this schematic same way. I highlighted that section which is c
  <img src=asset/sch.jpg>
 </p>
 
-\\\\Maybe your first impression was 'this is quite complicated than RAT2.'. Because, essentially sidechain is detection and self feedback logic. I will explain it briefly.  
+Maybe your first impression was, "This is quite a bit more complicated than the RAT2." And that's understandable—after all, the sidechain involves both detection and a self-feedback mechanism. Let me explain it briefly.
 
+First, focus on IC2.1. Its output splits into two paths: one goes to the audio output, and the other feeds into the sidechain. The strength of this signal determines the basic compression intensity. When you turn up the COMPRESS potentiometer, the op-amp’s gain increases, so the signal becomes more compressed. This is because the signal ultimately controls the FET gate. As the voltage rises, the FET’s channel opens wider (Vgs moves closer to 0 from a negative value), which weakens the audio signal—since the channel connects to ground.
 
-First, focus on IC2.1. Its output spilit into two path. One signal goes to audio out, another goes to sidechain. That signal strength determines basic intensity of compression. And, if you turn up the COMPRESS potentiometer, The IC's gain become stronger, so the singal compressed harder. Because ultimately, that signal voltage controls FET gate. If this voltage gets higher, the FET's channel is opened wider as Vgs gets higher(getting closer to 0 from minus). This make audio signal weaker, because channel connects to GND.
-
-As you follow down the path, could see there is splited path. One goes to inverting opamp, another straght to D2. These paths are quite felt weird first time. After much thought, I figured out why it is shaped like that. It would be much better explained in diagram.
+As you follow the path, you'll notice a split: one line goes to an inverting op-amp, the other directly to D2. At first, this structure might seem confusing. But after some thought, I figured out why it’s designed this way. It would be much easier to explain with a diagram.
 
 ### Rectifying, Detecting
 
@@ -36,11 +35,15 @@ As you follow down the path, could see there is splited path. One goes to invert
  <img src=asset/waveform.jpg width="80%" height="80%">
 </p>
 
-Let's assume audio input is sinewave. Then sinewave also goes to sidechain path. That's waveform A. A inverted through inverting opamp, that's B. If B passed through diode, become C. As diodes allow to pass voltages above Voltage Forward, the singals below than VF are cut. Same thing happens on D, difference is A has been cut down instead of B. C and D merged into E because they meet at the node. And that signal goes to FET gate. 
+Let's assume the audio input is a sine wave. That sine wave also travels through the sidechain path — we'll call that waveform A. A is then inverted through an inverting op-amp, becoming waveform B. When B passes through a diode, it becomes waveform C, since diodes only allow voltages above their forward voltage (VF) to pass — anything below VF is clipped.
 
-It works as kind of retifier. But, why this structure is needed? First, lets assume that we directly control fet gate with waveform A. It will compress(open channel) only upper side of singal. Because JFET open its channel only when Vgs getting lower than 0. As lower side means minus voltage, jfet will close the channel rather than open it. So, it's essential to convert waveform from A to E. 
+The same thing happens with waveform D, except this time it's waveform A (not B) that's being clipped. Then, C and D are merged into waveform E at a common node. This final waveform E is what goes to the FET gate.
 
-Also, BAT43 diodes are used, not only for retifying but because they have lower VF. If VF was too high, most of signal gonna be cut. And FET only works when high signals come in.
+In effect, this functions as a kind of rectifier. But why is this structure necessary?
+
+Imagine we directly control the FET gate with waveform A. In that case, only the upper half of the wave would cause compression (i.e., open the FET channel). That’s because a JFET opens wider when Vgs gets closer to 0. Since the lower half of the sine wave is already negative, it would actually close the channel rather than open it. That’s why converting waveform A into waveform E is essential — it ensures the gate receives a proper, unipolar control signal.
+
+Also, BAT43 diodes are used not only for rectification, but because they have a low forward voltage. If VF were too high, much of the signal would be lost — and the FET only responds to relatively high gate signals.
 
 ### Time domain
 
@@ -48,17 +51,20 @@ Also, BAT43 diodes are used, not only for retifying but because they have lower 
  <img src=asset/attack.jpg width="14%" height="14%">
 </p>  
 
-Look at the scheamtic. I hightlighted some essential components. Then, let's talk about time. Because 'attack','release' potentiometers affect time. Technically, 'time constant'. 
-We discussed about how FET gate voltage is sourced, transformed. In this section, we discuss about how fast that voltage charged, discharged. 
+Look at the schematic — I’ve highlighted some essential components.
+Now, let’s talk about time, because the ‘attack’ and ‘release’ potentiometers control exactly that — technically, the time constant.
+
+Earlier, we discussed how the FET gate voltage is sourced and transformed.
+In this section, we'll focus on how quickly that voltage is charged and discharged.
 
 <p align='center'>
  <img src=asset/constant.png width="60%" height="60%"> 
 </p>  
-To make it clearer, I simplifed previous schematic. Resistance 'ATTACK' determines how fast charge C6. Resistance 'RELEASE' determines how fast discharge C6. If C6 was charged fast, quicker FET compresses signal. 
+To make it clearer, I simplified the previous schematic. The 'ATTACK' resistance determines how fast C6 charges, and the 'RELEASE' resistance determines how fast C6 discharges. If C6 charges quickly, the FET reacts faster and compresses the signal more quickly.
 
-These are core parameters of compressor. For example, attack time means, "How fast we react to a spike". On the other side, release time means "How quickly we return to normal after the spike". I also give a sonical example, attack determines "How much let drum spike sound passes." 
+These are the core timing parameters of a compressor. For example, attack time refers to how fast the circuit responds to a transient spike, while release time describes how quickly the circuit returns to normal after that spike.
 
-Conversely, release determines "How fast its volume returns." If it returns fast, it will sound unnatural(because it will make drum's volume be increased suddenly before it ends.), if it returns slowly, it will affect next drum hit(next drum hit will lose most of its power). 
+Here’s a sonic example. The attack setting controls how much of the initial drum transient is allowed to pass through. The release setting determines how quickly the volume returns to normal. If the release is too fast, it can sound unnatural because the volume may rise too quickly before the drum hit ends. On the other hand, if the release is too slow, it can reduce the impact of the next drum hit by not fully recovering in time.
 
 ### JFET, the signal controller
 <p align='center'>
