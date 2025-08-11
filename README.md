@@ -70,4 +70,6 @@ Here’s a sonic example. The attack setting controls how much of the initial dr
 <p align='center'>
  <img src=asset/fet.jpg width="14%" height="14%">
 </p>  
-This is last section of sidechain. It is no exaggeration to say that the other sections are for these JFETs. These JFET directly control audio signal. 
+This is last section of sidechain. It is no exaggeration to say that the whole sidechian is for these JFETs. Because the JFET directly adjust audio signal. Q1 is the one adjusting the signal, but I will explain about Q2 first. 
+
+Q2 is looked like less important than Q1, as Q2 doesn't control the signal directly. However, Q2 pave the way to enable Q1 controls the signal precisely, because Q2 stablize Q1's source voltage. Therefore, Q1's gate voltage can determines directly openness of its channel, regardless of source voltage(Think about Vgs ∝ openness). 
