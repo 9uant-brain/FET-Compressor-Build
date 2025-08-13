@@ -45,6 +45,12 @@ Imagine we directly control the FET gate with waveform A. In that case, only the
 
 Also, BAT43 diodes are used not only for rectification, but because they have a low forward voltage. If VF were too high, much of the signal would be lost — and the FET only responds to relatively high gate signals.
 
+I actually measured how the rectified signal appears — you can see the result in the picture below.
+
+<p align='center'>
+ <img src=asset/waveform2.jpg width="80%" height="80%">
+</p>
+
 ### Time domain
 
 <p align='center'>
@@ -74,4 +80,4 @@ This is last section of sidechain. It is no exaggeration to say that the whole s
 
 Q2 is looked like less important than Q1, as Q2 doesn't control the signal directly. However, Q2 pave the way to enable Q1 controls the signal precisely, because Q2 stablize Q1's source voltage. 
 
-When it comes to voltage stablization, Q2 and also C7 are important. C7 absorbs Q1's source AC voltage, enable Vg directly control Q1's channel. But, that capacitor has high impedence at lower frequencies. Therefore, C7 can't handle low frequency fluctuation, at this moment, Q2 comes into play. If Q1's source voltage rose, 
+When it comes to voltage stablization, Q2 and also C7 are important. C7 absorbs Q1's source AC voltage, enable Vg directly control Q1's channel. But, that capacitor has high impedence at lower frequencies. Therefore, C7 can't handle low frequency fluctuation, at this moment, Q2 comes into play. When peak signal came into, Q1
