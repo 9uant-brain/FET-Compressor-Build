@@ -48,7 +48,7 @@ Also, BAT43 diodes are used not only for rectification, but because they have a 
 I actually measured how the rectified signal appears — you can see the result in the picture below.
 
 <p align='center'>
- <img src=asset/waveform2.jpg width="80%" height="80%">
+ <img src=asset/waveform2.jpg width="30%" height="30%">
 </p>
 
 ### Time domain
