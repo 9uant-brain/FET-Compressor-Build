@@ -72,4 +72,6 @@ Here’s a sonic example. The attack setting controls how much of the initial dr
 </p>  
 This is last section of sidechain. It is no exaggeration to say that the whole sidechian is for these JFETs. Because the JFET directly adjust audio signal. Q1 is the one adjusting the signal, but I will explain about Q2 first. 
 
-Q2 is looked like less important than Q1, as Q2 doesn't control the signal directly. However, Q2 pave the way to enable Q1 controls the signal precisely, because Q2 stablize Q1's source voltage. Therefore, Q1's gate voltage can determines directly openness of its channel, regardless of source voltage(Think about Vgs ∝ openness). 
+Q2 is looked like less important than Q1, as Q2 doesn't control the signal directly. However, Q2 pave the way to enable Q1 controls the signal precisely, because Q2 stablize Q1's source voltage. 
+
+When it comes to voltage stablization, Q2 and also C7 are important. C7 absorbs Q1's source AC voltage, enable Vg directly control Q1's channel. But, that capacitor has high impedence at lower frequencies. Therefore, C7 can't handle low frequency fluctuation, at this moment, Q2 comes into play. If Q1's source voltage rose, 
