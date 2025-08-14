@@ -45,7 +45,7 @@ Imagine we directly control the FET gate with waveform A. In that case, only the
 
 Also, BAT43 diodes are used not only for rectification, but because they have a low forward voltage. If VF were too high, much of the signal would be lost — and the FET only responds to relatively high gate signals.
 
-I actually measured how the rectified signal appears — you can see the result in the picture below.
+I measured the rectified output to observe its actual shape — the captured waveform is shown below.
 
 <p align='center'>
  <img src=asset/waveform2.jpg width="30%" height="30%">
