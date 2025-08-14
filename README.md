@@ -45,7 +45,7 @@ Imagine we directly control the FET gate with waveform A. In that case, only the
 
 Also, BAT43 diodes are used not only for rectification, but because they have a low forward voltage. If VF were too high, much of the signal would be lost — and the FET only responds to relatively high gate signals.
 
-I measured the rectified output to observe its actual shape — the captured waveform is shown below.
+Also I measured the rectified output to observe its actual shape — the captured waveform is shown below.
 
 <p align='center'>
  <img src=asset/waveform2.jpg width="30%" height="30%">
@@ -80,4 +80,9 @@ This is last section of sidechain. It is no exaggeration to say that the whole s
 
 Q2 is looked like less important than Q1, as Q2 doesn't control the signal directly. However, Q2 pave the way to enable Q1 controls the signal precisely, because Q2 stablize Q1's source voltage. 
 
-When it comes to voltage stablization, Q2 and also C7 are important. C7 absorbs Q1's source AC voltage, enable Vg directly control Q1's channel. But, that capacitor has high impedence at lower frequencies. Therefore, C7 can't handle low frequency fluctuation, at this moment, Q2 comes into play. When peak signal came into, Q1
+When it comes to voltage stablization, Q2 and also C7 are important. C7 absorbs Q1's source AC voltage, enable Vg directly control Q1's channel. But, that capacitor has high impedence at lower frequencies. Therefore, C7 can't handle low frequency fluctuation well, at this moment, Q2 comes into play. Here is how it works.
+
+In its normal state, a current (Id) constantly flows through Q2. Since Q2 operates in self-bias mode, Vs varies continuously as Id changes — per Ohm's law (V = IR), Id flowing through R13 generates Vs. This Vs determines Vgs, which controls how open the channel is. The channel openness, in turn, affects Id. Let's refer to Q2’s source node as 'Node B'.
+
+When peak signal came into, larger current flow out from Q1's channel, then it rise Vs of Q1(node A). Also, node A is Q2's gate. Then, instantly Q2's Vgs goes over 0, which means, the gate become forward bias, a current can flow through Q1's gate. It is samething happen in forward biased diode. And, let's draw whole picture of it. 
+Initially, Q1 Id instantly more flows.
