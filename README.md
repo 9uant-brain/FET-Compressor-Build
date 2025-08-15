@@ -76,16 +76,21 @@ Here’s a sonic example. The attack setting controls how much of the initial dr
 <p align='center'>
  <img src=asset/fet.jpg width="14%" height="14%">
 </p>  
-This is last section of sidechain. It is no exaggeration to say that the whole sidechian is for these JFETs. Because the JFET directly adjust audio signal. Q1 is the one adjusting the signal, but I will explain about Q2 first. 
+This is the final section of the sidechain. It's no exaggeration to say that the entire sidechain circuit exists to serve these JFETs — since they directly control the audio signal. While Q1 is the one actually adjusting the signal, we'll start with Q2.
 
-Q2 is looked like less important than Q1, as Q2 doesn't control the signal directly. However, Q2 pave the way to enable Q1 controls the signal precisely, because Q2 stablize Q1's source voltage. 
+Q2 may seem less important than Q1, as it doesn't directly touch the signal path. However, it plays a critical supporting role by stabilizing Q1’s source voltage, which enables more accurate control.
 
-When it comes to voltage stablization, Q2 and also C7 are important. C7 absorbs Q1's source AC voltage, enable Vg directly control Q1's channel. But, that capacitor has high impedence at lower frequencies. Therefore, C7 can't handle low frequency fluctuation well, at this moment, Q2 comes into play. Here is how it works.
+When it comes to voltage stabilization, both Q2 and capacitor C7 are involved. C7 absorbs AC fluctuations at Q1’s source, helping the gate voltage (Vg) directly control the channel conductance. But C7 has high impedance at low frequencies and struggles to suppress slow fluctuations. That’s where Q2 comes into play.
 
-In its normal state, a current (Id) constantly flows through Q2. Since Q2 operates in self-bias mode, Vs varies continuously as Id changes — per Ohm's law (V = IR), Id flowing through R13 generates Vs. This Vs determines Vgs, which controls how open the channel is. The channel openness, in turn, affects Id. Let's refer to Q2’s source node as 'Node B'.
+Under normal conditions, a constant drain current (Id) flows through Q2. Since Q2 operates in a self-bias configuration, its source voltage (Vs) varies dynamically as Id changes — per Ohm's Law (V = IR), current through R13 generates a voltage drop that defines Vs. Vs determines Vgs, which in turn governs how open the JFET channel is. For clarity, let’s call Q2’s source node “Node B.”
 
-When peak signal came into, larger current flow out from Q1's channel, then it rose Vs of Q1(node A). Also, node A is Q2's gate. Then, instantly Q2's Vgs goes over 0, which means, the gate become forward bias, a current can flow through Q1's gate. It is samething happen in forward biased diode. And, let's draw a whole picture of it. 
+Now let’s walk through what happens during a signal peak.
 
-Initially, signal peaks, Q1's Id instantly more flows. Then, node A's voltage rise, enables Q1's Id flow into Q2's channel. Now important part, what meaning Q1's Id flew into Q2 channel is, part of node A voltage is divided to B (V = IR). This doesn’t merely share the voltage from node A to node B — it also raises the source voltage of Q2. As a result, the drain current (Id) of Q2 decreases. This reduction in Id means less current flows through TR1, which in turn causes an additional voltage drop at node A.
+When a transient spike hits, Q1’s channel conducts more current (Id), causing its source voltage (Node A) to rise. Node A also happens to be Q2’s gate. So, when Node A rises, Q2’s gate-to-source voltage (Vgs) briefly becomes positive — meaning the gate is forward-biased, much like a forward-biased diode. This allows current to flow into the gate, which then travels through Q2’s channel.
 
-But why need this system? Don't we already have sidechain which controls JFET gate? Because sidechain system is slower than this system, as they pass diode, opamps. So, this system react to sudden peak before sidechain can.
+This has a subtle but important effect:
+Q1’s Id is effectively shared with Q2, and as current flows into Q2’s channel, a portion of Node A’s voltage is transferred to Node B (again, V = IR). This doesn’t just “share” voltage — it actively raises Q2’s source voltage (Vs). As Vs increases, Q2’s Vgs drops (becomes less negative), narrowing the channel and reducing Id. This decrease in Id means less current flows through TR1, leading to additional voltage drop at Node A.
+
+So why is this mechanism needed if we already have a sidechain controlling the JFET gates?
+
+Because this feedback path reacts faster than the main sidechain. The sidechain signal must pass through multiple stages — op-amps, rectifiers, diodes — introducing latency. In contrast, this gate injection feedback loop responds immediately to transient spikes, suppressing them before the main sidechain even kicks in.
