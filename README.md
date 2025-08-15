@@ -94,3 +94,15 @@ Q1’s Id is effectively shared with Q2, and as current flows into Q2’s channe
 So why is this mechanism needed if we already have a sidechain controlling the JFET gates?
 
 Because this feedback path reacts faster than the main sidechain. The sidechain signal must pass through multiple stages — op-amps, rectifiers, diodes — introducing latency. In contrast, this gate injection feedback loop responds immediately to transient spikes, suppressing them before the main sidechain even kicks in.
+## Design and Implementation
+### Schematic Creation
+<p align='center'>
+ <img src=asset/FET_SCH.png width="70%" height="70%">
+</p>  
+Mostly, this schematic is same as original schematic. I just edited some parts, slightly changed resistors for fitting my inventory, changed opamp numbers. And, some subboard designs with audio jacks, footswtich. At first, I followed same opamp number as orignal one, it was edited while I designing PCB layout. I will discuss about it later. 
+### PCB layout Creation 
+This circuit have lots of components, and I don't want to use larger enclousure, I decided to design it with SMD component. Also I wondered I could solder neatly SMD components. 
+<p align='center'>
+ <img src=asset/PCB2.png width="70%" height="70%">
+</p>  
+This was abandoned design. 
