@@ -87,3 +87,5 @@ In its normal state, a current (Id) constantly flows through Q2. Since Q2 operat
 When peak signal came into, larger current flow out from Q1's channel, then it rose Vs of Q1(node A). Also, node A is Q2's gate. Then, instantly Q2's Vgs goes over 0, which means, the gate become forward bias, a current can flow through Q1's gate. It is samething happen in forward biased diode. And, let's draw a whole picture of it. 
 
 Initially, signal peaks, Q1's Id instantly more flows. Then, node A's voltage rise, enables Q1's Id flow into Q2's channel. Now important part, what meaning Q1's Id flew into Q2 channel is, part of node A voltage is divided to B (V = IR). This doesn’t merely share the voltage from node A to node B — it also raises the source voltage of Q2. As a result, the drain current (Id) of Q2 decreases. This reduction in Id means less current flows through TR1, which in turn causes an additional voltage drop at node A.
+
+But why need this system? Don't we already have sidechain which controls JFET gate? Because sidechain system is slower than this system, as they pass diode, opamps. So, this system react to sudden peak before sidechain can.
