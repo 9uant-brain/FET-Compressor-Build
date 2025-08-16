@@ -102,9 +102,17 @@ Because this feedback path reacts faster than the main sidechain. The sidechain 
 Mostly, this schematic is same as original schematic. I just edited some parts, slightly changed resistors for fitting my inventory, changed opamp numbers. And, some subboard designs with audio jacks, footswtich. At first, I followed same opamp number as orignal one, it was edited while I designing PCB layout. I will discuss about it later. 
 
 ### PCB layout Creation 
+
 This circuit have lots of components, and I don't want to use larger enclousure, I decided to design it with SMD component. Also I wondered I could solder neatly SMD components. I will explain older design first, then explain reivsed design.
------
+
+----
+
 <p align='center'>
  <img src=asset/PCB2.png width="70%" height="70%">
 </p>  
-This was abandoned design.  
+
+This was abandoned design, I couldn't complete neatly connecting all pad. So, I started from scratch, and approached strategically. I figured out what problems it had, and focused on revising that point.
+First, I mistaked place SOIC on both side of board. I thought it would help with a less crowded track layout. It turns out, making things worse, as I had to switching tracks between both sides frequently.
+Second, I made a mistake in placing the potentiometers. I prioritized user-friendly knob positioning, without considering trace routing and connectivity. For example, the wet(=mix) knob should be positioned near the audio input and after side chain. I didn't noticed at first, so I positioned it at the top of the board
+
+ 
