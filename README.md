@@ -100,9 +100,11 @@ Because this feedback path reacts faster than the main sidechain. The sidechain 
  <img src=asset/FET_SCH.png width="70%" height="70%">
 </p>  
 Mostly, this schematic is same as original schematic. I just edited some parts, slightly changed resistors for fitting my inventory, changed opamp numbers. And, some subboard designs with audio jacks, footswtich. At first, I followed same opamp number as orignal one, it was edited while I designing PCB layout. I will discuss about it later. 
+
 ### PCB layout Creation 
-This circuit have lots of components, and I don't want to use larger enclousure, I decided to design it with SMD component. Also I wondered I could solder neatly SMD components. 
+This circuit have lots of components, and I don't want to use larger enclousure, I decided to design it with SMD component. Also I wondered I could solder neatly SMD components. I will explain older design first, then explain reivsed design.
+-----
 <p align='center'>
  <img src=asset/PCB2.png width="70%" height="70%">
 </p>  
-This was abandoned design. 
+This was abandoned design.  
