@@ -127,7 +127,7 @@ This is revised final design, with sub board. I will explain what is revised.
  3. I changed opamp numberings. I jsut felt that while designing, if I change numbering, traces gonna be short, and neat.
  4. I rearranged potentiometer position, I balanced between user-friendly and pad connectivity.
 
-I experienced a lesson while revising it. There is moment I have to compromise between ideal and reality. I have to sacrifice user-friendly potentiometer(knob) position for neat traces. At first, while I reference orginal pedal, ego76, thought that. They cared less about user friendly knob position. But, after revising, my perspective shifted. "It is more likely, they just traded off". In the picture below, I compared and highlighted knob position between my design, and original pedal. They are quite similar, although I didn't referenced its knob position during revising.
+I experienced a lesson while revising it. There is moment I have to compromise between ideal and reality. I have to sacrifice user-friendly potentiometer(knob) position for neat traces. At first, while I reference orginal pedal, ego76, thought that. They cared less about user friendly knob position. But, after revising, my perspective shifted. "It is more likely, they just traded off". In the picture below, I compared and highlighted knob position between my design, and original pedal. They are quite similar, even I didn't referenced its knob position during revising.
 
 <p align='center'>
  <img src=asset/PCB3.png width="70%" height="70%">
