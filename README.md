@@ -113,7 +113,7 @@ This circuit have lots of components, and I don't want to use larger enclousure,
 
 This was abandoned design, I couldn't complete neatly connecting all pad. So, I started from scratch, and approached strategically. I figured out what problems it had, and focused on revising that point.
 First, I mistaked place SOIC on both side of board. I thought it would help with a less crowded track layout. It turns out, making things worse, as I had to switching tracks between both sides frequently.
-Second, I made a mistake in placing the potentiometers. I prioritized user-friendly knob positioning, without considering trace routing and connectivity. For example, the wet(=mix) knob should be positioned near the audio input and after side chain. But I didn't noticed at first, so I positioned it at the top of the board for only user-friendly (from the Top, Wet, Tone, Volume). 
+Second, I made a mistake in placing the potentiometers. I prioritized user-friendly knob positioning, without considering trace routing and connectivity. For example, the wet(=blend) knob should be positioned near the audio input and after side chain. But I didn't noticed at first, so I positioned it at the top of the board for only user-friendly (from the Top, Wet, Tone, Volume). 
 
 ----
 
@@ -124,5 +124,11 @@ This is revised final design, with sub board. I will explain what is revised.
 
  1. I rotated some potentiometers to secure more space. Because in previous design, potentiometer pins occupied center area. 
  2. I moved some components composing input section, to subboard. So, I could secure some space. 
- 3. I changed opamp numberings,
- 4. I rearranged potentio
+ 3. I changed opamp numberings. I jsut felt that while designing, if I change numbering, traces gonna be short, and neat.
+ 4. I rearranged potentiometer position, I balanced between user-friendly and pad connectivity.
+
+I experienced a lesson while revising it. There is moment I have to compromise between ideal and reality. I have to sacrifice user-friendly potentiometer(knob) position for neat traces. At first, while I reference orginal pedal, ego76, thought that. They cared less about user friendly knob position. But, after revising, my perspective shifted. "It is more likely, they just traded off". In the picture below, I compared and highlighted knob position between my design, and original pedal. They are quite similar, although I didn't referenced its knob position during revising.
+
+<p align='center'>
+ <img src=asset/PCB3.png width="70%" height="70%">
+</p>  
