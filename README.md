@@ -121,7 +121,7 @@ Second, I made a mistake in placing the potentiometers. I prioritized user-frien
  <img src=asset/PCB2.png width="70%" height="70%">
 </p>  
 This is revised final design, with sub board. I will explain what is revised.
-1. I rotated some potentiometers to secure more space. Because in previous design, potentiometer pins occupied center area. 
-2. I moved some components composing input section, to subboard. So, I could secure some space. 
-3. I changed opamp numberings,
-4. I rearranged potentio
+ 1. I rotated some potentiometers to secure more space. Because in previous design, potentiometer pins occupied center area. 
+ 2. I moved some components composing input section, to subboard. So, I could secure some space. 
+ 3. I changed opamp numberings,
+ 4. I rearranged potentio
