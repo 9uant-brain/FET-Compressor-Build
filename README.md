@@ -99,11 +99,13 @@ Because this feedback path reacts faster than the main sidechain. The sidechain 
 <p align='center'>
  <img src=asset/FET_SCH.png width="70%" height="70%">
 </p>  
-Mostly, this schematic is same as original schematic. I just edited some parts, slightly changed resistors for fitting my inventory, changed opamp numbers. And, some subboard designs with audio jacks, footswtich. At first, I followed same opamp number as orignal one, it was edited while I designing PCB layout. I will discuss about it later. 
-
+Most of this schematic is identical to the original. I only made a few minor edits — changing some resistor values to match the parts I had in stock and updating the op-amp numbering.
+I also added subboard designs for the audio jacks and footswitch.
+Initially, I followed the same op-amp numbering as in the original, but that changed during PCB layout work. I’ll go into more detail about that later.
 ### PCB layout Creation 
 
-This circuit have lots of components, and I don't want to use larger enclousure, I decided to design it with SMD component. Also I wondered I could solder neatly SMD components. I will explain older design first, then explain reivsed design.
+This circuit has a lot of components, and since I didn’t want to use a larger enclosure, I decided to design it using SMD components.I was also curious to see whether I could solder SMD parts neatly.
+I’ll first explain the older design, and then go over the revised version.
 
 -----
 
@@ -111,23 +113,32 @@ This circuit have lots of components, and I don't want to use larger enclousure,
  <img src=asset/PCB1.png width="70%" height="70%">
 </p>  
 
-This was abandoned design, I couldn't complete neatly connecting all pad. So, I started from scratch, and approached strategically. I figured out what problems it had, and focused on revising that point.
-First, I mistaked place SOIC on both side of board. I thought it would help with a less crowded track layout. It turns out, making things worse, as I had to switching tracks between both sides frequently.
-Second, I made a mistake in placing the potentiometers. I prioritized user-friendly knob positioning, without considering trace routing and connectivity. For example, the wet(=blend) knob should be positioned near the audio input and after side chain. But I didn't noticed at first, so I positioned it at the top of the board for only user-friendly (from the Top, Wet, Tone, Volume). 
+This was an abandoned design — I couldn’t complete it cleanly because I failed to connect all the pads neatly.
+
+So, I started from scratch and approached the layout more strategically. I identified the key issues in the previous version and focused on resolving them. During that process, I also took into account the relative placement of components in the schematic.
+
+First, I mistakenly placed SOIC packages on both sides of the board. I initially thought this would help reduce track congestion, but it actually made things worse. I had to frequently switch tracks between the top and bottom layers, which complicated routing even more.
+
+Second, I made a mistake when placing the potentiometers. I focused too much on user-friendly knob positioning without considering signal flow or layout efficiency. For example, the wet (blend) knob should ideally be located near the audio input and positioned after the sidechain. But I didn’t realize that at first, and instead placed it at the top of the board for ergonomic reasons (2nd row: Wet, Tone, Volume).
 
 ----
 
 <p align='center'>
  <img src=asset/PCB2.png width="70%" height="70%">
 </p>  
-This is revised final design, with sub board. I will explain what is revised.
+This is the revised final design, now including a sub-board. Here’s what I changed:
 
- 1. I rotated some potentiometers to secure more space. Because in previous design, potentiometer pins occupied center area. 
- 2. I moved some components composing input section, to subboard. So, I could secure some space. 
- 3. I changed opamp numberings. I jsut felt that while designing, if I change numbering, traces gonna be short, and neat.
- 4. I rearranged potentiometer position, I balanced between user-friendly and pad connectivity.
+1. I rotated some potentiometers to free up more space. In the previous design, their pins occupied the central area and interfered with routing.
+2. I moved several components from the input section to the sub-board, which helped reduce congestion and secure more board space.
+3. I changed the op-amp numbering. While positioning and tracing the layout, I realized that renumbering the op-amps would shorten trace lengths and make the routing cleaner.
+4. I rearranged the potentiometer layout to strike a better balance between user-friendly knob placement and efficient PCB connectivity.
 
-I experienced a lesson while revising it. There is moment I have to compromise between ideal and reality. I have to sacrifice user-friendly potentiometer(knob) position for neat traces. At first, while I reference orginal pedal, ego76, thought that. They cared less about user friendly knob position. But, after revising, my perspective shifted. "It is more likely, they just traded off". In the picture below, I compared and highlighted knob position between my design, and original pedal. They are quite similar, even I didn't referenced its knob position during revising.
+
+I learned an important lesson while revising this design: sometimes, you have to compromise between the ideal and reality. Specifically, I had to sacrifice the ideal, user-friendly positioning of the potentiometers (knobs) in favor of cleaner and more efficient trace routing.
+
+At first glance, when I looked at the original pedal —the Ego76— I assumed they simply hadn’t prioritized user-friendly knob placement. But as I revised my own layout, my perspective changed. I realized it’s more likely that they made intentional trade-offs, just like I did.
+
+In the image below, I’ve compared the knob positions between my design and the original pedal. Despite not referencing the original layout during my revision—mainly because my design uses a different row structure (3×2 vs. 2×3)—the final placements turned out to be quite similar. This suggests that shared physical constraints and ergonomic considerations can naturally lead to converging design choices, even when developed independently.
 
 <p align='center'>
  <img src=asset/PCB3.jpg width="70%" height="70%">
