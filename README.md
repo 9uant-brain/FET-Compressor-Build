@@ -132,3 +132,13 @@ I experienced a lesson while revising it. There is moment I have to compromise b
 <p align='center'>
  <img src=asset/PCB3.jpg width="70%" height="70%">
 </p>  
+
+## Assembly
+As usual, I ordered PCB, soldered it. And drilled enclosure, mounted the board into it. One exceptional thing is, I soldered some SMD parts for the first time. Instead of boring explaining, I'll just list pictures of assemblying process.
+
+<p align='center'>
+ <img src=asset/ssy1.jpg width="70%" height="70%">
+</p>  
+<p align='center'>
+ <img src=asset/ssy2.jpg width="70%" height="70%">
+</p>  
