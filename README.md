@@ -153,3 +153,5 @@ As usual, I ordered PCB, soldered it. And drilled enclosure, mounted the board i
 <p align='center'>
  <img src=asset/ssy2.jpg width="70%" height="70%">
 </p>  
+## Debugging, because most things won’t work at first
+After finishing soldering, I immediately turned the amp on, plugged this thing. It sounded well, but it was quite. Especially when I turned wet knob all the way up. Which means, compressed signal is too compressed even I can barely hear it. At first, I thought it was caused by damaged mlcc decoupling capacitor which cause leakage to GND. So, I disoldered it, that solution won't work. Then, I suspected JFETs, because if they weren't, there is no suspected factor. So, I pull out of JFETs from socket, and measure the node. Now there is no over signal vanishing, so problem defined clearly. 
