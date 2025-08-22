@@ -148,31 +148,31 @@ In the image below, I’ve compared the knob positions between my design and the
 As usual, I ordered the PCB, soldered it, drilled the enclosure, and mounted the board inside. One notable difference this time was that I soldered some SMD parts for the first time. Rather than giving a long explanation, I’ll just show the pictures of the assembly process.
 
 <p align='center'>
- <img src=asset/ssy1.jpg width="70%" height="50%">
+ <img src=asset/ssy1.jpg width="50%" height="50%">
 </p>  
 
 <p align='center'>
- <img src=asset/ssy2.jpg width="70%" height="50%">
+ <img src=asset/ssy2.jpg width="50%" height="50%">
 </p>  
 
 <p align='center'>
- <img src=asset/ssy3.jpg width="70%" height="50%">
+ <img src=asset/ssy3.jpg width="50%" height="50%">
 </p>  
 
 <p align='center'>
- <img src=asset/ssy4.jpg width="70%" height="50%">
+ <img src=asset/ssy4.jpg width="50%" height="50%">
 </p>  
 
 <p align='center'>
- <img src=asset/ssy5.jpg width="70%" height="50%">
+ <img src=asset/ssy5.jpg width="50%" height="50%">
 </p>  
 
 <p align='center'>
- <img src=asset/ssy6.png width="70%" height="50%">
+ <img src=asset/ssy6.png width="50%" height="50%">
 </p>  
 
 <p align='center'>
- <img src=asset/ssy7.png width="70%" height="50%">
+ <img src=asset/ssy7.png width="50%" height="50%">
 </p>  
 
 ## Debugging, because most things won’t work at first
