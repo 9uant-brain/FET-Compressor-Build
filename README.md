@@ -17,7 +17,7 @@ For these reasons—mainly cost-effectiveness and control over the feature set�
 
 I like to describe a compressor this way: Imagine a helper sitting by the volume knob, watching the audio waveform just before it's played. If the signal gets too loud — above a certain threshold — he quickly turns the volume down.
 
-So, I can explain this schematic same way. I highlighted that section which is called as 'sidechain', I metaphored it as 'a helper'. It's the core section of compressors; you could even call it a compressor itself. I will focus on it in this chapter. And, let's look into schematic below.
+So, I can explain this schematic same way. I highlighted that section which is called the ‘sidechain’; I likened it to a ‘helper’. It's the core section of compressors; you could even call it a compressor itself. I will focus on it in this chapter. And, Let’s look at the schematic below.
 
 <p align='center'>
  <img src=asset/sch.jpg>
@@ -29,7 +29,7 @@ First, focus on IC2.1. Its output splits into two paths: one goes to the audio o
 
 As you follow the path, you'll notice a split: one line goes to an inverting op-amp, the other directly to D2. At first, this structure might seem confusing. But after some thought, I figured out why it’s designed this way. It would be much easier to explain with a diagram.
 
-### Rectifying, Detecting
+### Rectification and Detection
 
 <p align='center'>
  <img src=asset/waveform.jpg width="80%" height="80%">
@@ -45,7 +45,7 @@ Imagine we directly control the FET gate with waveform A. In that case, only the
 
 Also, BAT43 diodes are used not only for rectification, but because they have a low forward voltage. If VF were too high, much of the signal would be lost — and the FET only responds to relatively high gate signals.
 
-Also I measured the rectified output to observe its actual shape — the captured waveform is shown below.
+I also measured the rectified output to observe its actual shape — the captured waveform is shown below.
 
 <p align='center'>
  <img src=asset/waveform2.jpg width="30%" height="30%">
@@ -104,7 +104,7 @@ I also added subboard designs for the audio jacks and footswitch.
 Initially, I followed the same op-amp numbering as in the original, but that changed during PCB layout work. I’ll go into more detail about that later.
 ### PCB layout Creation 
 
-This circuit has a lot of components, and since I didn’t want to use a larger enclosure, I decided to design it using SMD components.I was also curious to see whether I could solder SMD parts neatly.
+This circuit has a lot of components, and since I didn’t want to use a larger enclosure, I decided to design it using SMD components. I was also curious to see whether I could solder SMD parts neatly.
 I’ll first explain the older design, and then go over the revised version.
 
 -----
