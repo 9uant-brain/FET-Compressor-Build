@@ -1,15 +1,15 @@
 ## Why I made this
-After finishing my RAT2 project, I built and even bought a few more pedals. But I still didn’t have a compressor pedal. The reason was simple: compressors tend to be deprioritized because they don’t shape the sound dramatically. They mainly tame loud peaks while slightly boosting quieter parts—or so I thought.
+After finishing my RAT2 project, I built and even bought a few more pedals, but I still didn’t have a compressor pedal. The reason was simple: compressors tend to be deprioritized because they don’t reshape the sound dramatically—they mainly tame loud peaks and add a touch of sustain… or so I thought.
 
-However, when I got hooked on Jimi Hendrix’s music, I realized I needed a compressor. His playing focuses on a sophisticated yet raw electric guitar tone, and compression plays a key role in achieving that.
+When I went deep into Jimi Hendrix’s recordings, I realized I needed a compressor. He wasn’t known for using a compressor pedal, but the combination of natural amp compression and studio processing on those tracks contributes to that sophisticated yet raw electric guitar tone I was chasing.
 
-I could have just bought a cheap Chinese pedal, but I decided to build my own instead. There were several reasons for that choice.
+I could have just bought a low-cost pedal, but I decided to build my own instead. There were several reasons for that choice.
 
-First, I wanted a compressor with attack and release controls to get a truly clean guitar tone—but even China-made pedals with these features tend to be quite expensive.
+First, I wanted independent attack and release controls to get a truly clean, controlled tone—and even among budget pedals, that exact feature set is uncommon.
 
-Second, I wanted a compressor versatile enough for both guitar and bass. For that, a dry/wet mix (also known as parallel compression) was essential. Bass guitars typically have very strong signals, and if a compressor isn’t designed specifically to handle them, it can cause a “pumping” effect. This happens when the compressor clamps down too aggressively on the signal and then releases, creating an audible swell or “pump.” By blending in some dry signal with the compressed tone, this effect can be reduced or avoided.
+Second, I wanted a compressor versatile enough for both guitar and bass. For that, a dry/wet mix (parallel compression) is extremely useful. On bass, loud low frequencies can make a compressor clamp down so hard that the overall volume briefly dips after a strong note and then swells back — an audible “breathing” effect often called pumping. Blending in some dry signal keeps the original attack and reduces that dip-and-swell.
 
-For these reasons (mostly due to cost-effectiveness), I decided to build a compressor myself. Then, I searched the internet for reference schematics and finally found one on 'pedalpcb.com'.
+For these reasons—mainly cost-effectiveness and control over the feature set—I decided to build a compressor myself. I searched the internet for reference schematics and ultimately chose a design from PedalPCB as my starting point.
 
 
 ## Circuit overview
@@ -145,16 +145,44 @@ In the image below, I’ve compared the knob positions between my design and the
 </p>  
 
 ## Assembly
-As usual, I ordered PCB, soldered it. And drilled enclosure, mounted the board into it. One exceptional thing is, I soldered some SMD parts for the first time. Instead of boring explaining, I'll just list pictures of assemblying process.
+As usual, I ordered the PCB, soldered it, drilled the enclosure, and mounted the board inside. One notable difference this time was that I soldered some SMD parts for the first time. Rather than giving a long explanation, I’ll just show the pictures of the assembly process.
 
 <p align='center'>
- <img src=asset/ssy1.jpg width="70%" height="70%">
+ <img src=asset/ssy1.jpg width="70%" height="50%">
 </p>  
+
 <p align='center'>
- <img src=asset/ssy2.jpg width="70%" height="70%">
+ <img src=asset/ssy2.jpg width="70%" height="50%">
+</p>  
+
+<p align='center'>
+ <img src=asset/ssy3.jpg width="70%" height="50%">
+</p>  
+
+<p align='center'>
+ <img src=asset/ssy4.jpg width="70%" height="50%">
+</p>  
+
+<p align='center'>
+ <img src=asset/ssy5.jpg width="70%" height="50%">
+</p>  
+
+<p align='center'>
+ <img src=asset/ssy6.png width="70%" height="50%">
+</p>  
+
+<p align='center'>
+ <img src=asset/ssy7.png width="70%" height="50%">
 </p>  
 
 ## Debugging, because most things won’t work at first
 
-After finishing soldering, I immediately turned the amp on, plugged this thing. It sounded well, but it was quite. Especially when I turned wet knob all the way up. Which means, compressed signal is too compressed even I can barely hear it. At first, I thought it was caused by damaged mlcc decoupling capacitor which cause leakage to GND. So, I disoldered it, that solution won't work. Then, I suspected JFETs, because if they weren't, there is no suspected factor. So, I pull out of JFETs from socket, and measure the node. Now there is no over signal vanishing, so problem defined clearly. Then, I started analyzing why JFET matters, and it turned out problem was used JFETs have lower Idss. Low Idss can't pull up sufficient source voltage, so JFET's channel can't be closed sufficiently. So, audio signal kept vanish into GND. So, I tried to change trimpot from 10K ohm to 50K ohm, so the voltage can pulled up. 
-But it didn't work, as the Idss is too low, I have to let the trimpot get 30~40K ohm, now compressing(flew the signal to GND) didn't happen.
+After finishing soldering, I immediately powered on the amp and plugged this thing in. It sounded fine at first, but very quiet—especially when I turned the wet knob all the way up. That suggested the compressed signal was being over-compressed, to the point where it was barely audible.
+
+At first, I suspected a damaged MLCC decoupling capacitor leaking to ground, so I desoldered it. Indeed, the MLCC was causing some leakage, but even after removing it, the issue remained. I then noticed that only when the JFET was removed did the signal stop getting compressed. This meant that both the MLCC and the JFET were contributing to the problem.
+
+Digging deeper into the JFET behavior, I found that the devices I used had lower Idss than expected. With such low Idss, the JFET couldn’t generate enough source voltage, so its channel wouldn’t fully close. As a result, the audio signal kept bleeding into ground.
+
+To fix this, I tried replacing the trimpot from 10 kΩ to 50 kΩ, so the voltage could be pulled up higher. But it didn’t work—because the Idss was simply too low, I had to raise the trimpot to a much higher resistance (around 30–40 kΩ). At that point, the unwanted compression (signal flowing into ground) stopped, but as a side effect, the current hardly flowed at all, so compression itself no longer occurred.
+
+I ordered more JFETs hoping to find ones with proper Idss, but that batch also turned out weak. Fortunately, I eventually found a suitable JFET in my inventory with sufficient Idss. Since it was a different model, its Vgs(off) was different, which resulted in a different compression intensity. Still, when I tried it, it worked quite well.
