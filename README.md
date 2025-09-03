@@ -188,7 +188,7 @@ To fix this, I tried replacing the trimpot from 10 kΩ to 50 kΩ, so the voltage
 I ordered more JFETs hoping to find ones with proper Idss, but that batch also turned out weak. Fortunately, I eventually found a suitable JFET in my inventory with sufficient Idss. Since it was a different model, its Vgs(off) was different, which resulted in a different compression intensity. Still, when I tried it, it worked quite well.
 
 ## Final Product and Demonstration
-Here is the final product. I painted the enclosure and labeled the parameters using a waterslide decal that I printed myself. I also added silver knobs. The photo of the finished unit is shown below.
+Here is the final product. I painted the enclosure and labeled the parameters using a waterslide decal that I printed myself. I also attached silver knobs. The photo of the finished unit is shown below.
 
 <p align='center'>
  <img src=asset/FP.jpg width="50%" height="50%">
