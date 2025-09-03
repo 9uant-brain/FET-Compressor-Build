@@ -187,8 +187,8 @@ To fix this, I tried replacing the trimpot from 10 kΩ to 50 kΩ, so the voltage
 
 I ordered more JFETs hoping to find ones with proper Idss, but that batch also turned out weak. Fortunately, I eventually found a suitable JFET in my inventory with sufficient Idss. Since it was a different model, its Vgs(off) was different, which resulted in a different compression intensity. Still, when I tried it, it worked quite well.
 
-## Completion, demonstration
-Here is final product. I painted it, and labeled parameters with waterslide decal, which I printed. Also I put silver knobs on it. Below is a photo of final product.
+## Final Product and Demonstration
+Here is the final product. I painted the enclosure and labeled the parameters using a waterslide decal that I printed myself. I also added silver knobs. The photo of the finished unit is shown below.
 
 <p align='center'>
  <img src=asset/FP.jpg width="50%" height="50%">
@@ -196,7 +196,7 @@ Here is final product. I painted it, and labeled parameters with waterslide deca
 
 ---
 
-Now, demonstration. For convinience, I input saw wave -it is easy to identify its variation-. Also it is 2VPP, 500Hz, which is similar with guitar raw signal. I posted demo video link below. 
+Now, for the demonstration. For convenience, I used a saw wave as the input signal, since it is easy to observe variations. The test signal is 2 Vpp at 500 Hz, which is similar to a raw guitar signal. The demo video link is posted below.
 
 [![Video Label](http://img.youtube.com/vi/WLm-msQ3tJI/0.jpg)](https://youtu.be/WLm-msQ3tJI)
 
@@ -209,3 +209,5 @@ In this video, you might have noticed how the parameters affect the signal, but 
 ``Compress`` (knob) behaves in a non-intuitive way: turning it up seems to result in less compression. In fact, it functions more like a threshold control. Increasing the compress setting allows more of the sidechain signal to pass through the diodes, which means lower-level audio is also affected. In simple terms, compress and threshold are inversely proportional.
 
 Why does it seem that a higher compress knob setting causes less compression? Because once a signal level is above a certain threshold, it is compressed in proportion to its amplitude. Earlier I briefly explained how the threshold is defined. Therefore, if 90% of a signal is above the threshold, that 90% retains the same relative differences as in the original (non-compressed) signal.
+
+## Conclusion
