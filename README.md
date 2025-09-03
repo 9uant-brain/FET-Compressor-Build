@@ -200,4 +200,12 @@ Now, demonstration. For convinience, I input saw wave -it is easy to identify it
 
 [![Video Label](http://img.youtube.com/vi/WLm-msQ3tJI/0.jpg)](https://youtu.be/WLm-msQ3tJI)
 
-In this video, you might noticed how parameters affect the signal, but I will explain more specifically. First, attack. Which controls how fast react initial peak. In this case, slower attack(turned the knob up) is seemed cause less compression, because slower attack slow compressing react to peak. Next, release. Release controls how long keep the compression. So, in this case, short release (turned the knob down) causes less comression, as compression instantly vanishes, won't affect next period. Last, compress.
+In this video, you might have noticed how the parameters affect the signal, but here I will explain them more specifically.
+
+``Attack`` controls how quickly the circuit reacts to the initial peak. In this case, a slower attack (knob turned up) appears to cause less compression, because the slower response delays the action of compression on the peak.
+
+``Release`` controls how long the compression is maintained. In this example, a shorter release (knob turned down) results in less overall compression, because the gain reduction vanishes quickly and does not affect the following period.
+
+``Compress`` (knob) behaves in a non-intuitive way: turning it up seems to result in less compression. In fact, it functions more like a threshold control. Increasing the compress setting allows more of the sidechain signal to pass through the diodes, which means lower-level audio is also affected. In simple terms, compress and threshold are inversely proportional.
+
+Why does it seem that a higher compress knob setting causes less compression? Because once a signal level is above a certain threshold, it is compressed in proportion to its amplitude. Earlier I briefly explained how the threshold is defined. Therefore, if 90% of a signal is above the threshold, that 90% retains the same relative differences as in the original (non-compressed) signal.
