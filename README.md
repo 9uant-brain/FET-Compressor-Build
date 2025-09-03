@@ -198,3 +198,6 @@ Here is final product. I painted it, and labeled parameters with waterslide deca
 
 Now, demonstration. For convinience, I input saw wave -it is easy to identify its variation-. Also it is 2VPP, 500Hz, which is similar with guitar raw signal. I posted demo video link below. 
 
+[![Video Label](http://img.youtube.com/vi/WLm-msQ3tJI/0.jpg)](https://youtu.be/WLm-msQ3tJI)
+
+In this video, you might noticed how parameters affect the signal, but I will explain more specifically. First, attack. Which controls how fast react initial peak. In this case, slower attack(turned the knob up) is seemed cause less compression, because slower attack slow compressing react to peak. Next, release. Release controls how long keep the compression. So, in this case, short release (turned the knob down) causes less comression, as compression instantly vanishes, won't affect next period. Last, compress.
