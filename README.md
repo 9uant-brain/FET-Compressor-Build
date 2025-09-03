@@ -25,7 +25,7 @@ So, I can explain this schematic same way. I highlighted that section which is c
 
 Maybe your first impression was, "This is quite a bit more complicated than the RAT2." And that's understandable—after all, the sidechain involves both detection and a self-feedback mechanism. Let me explain it briefly.
 
-First, focus on IC2.1. Its output splits into two paths: one goes to the audio output, and the other feeds into the sidechain. The strength of this signal determines the basic compression intensity. When you turn up the COMPRESS potentiometer, the op-amp’s gain increases, so the signal becomes more compressed. This is because the signal ultimately controls the FET gate. As the voltage rises, the FET’s channel opens wider (Vgs moves closer to 0 from a negative value), which weakens the audio signal—since the channel connects to ground.
+First, focus on IC2.1. Its output splits into two paths: one goes to the audio output, while the other feeds the sidechain. The level of this sidechain signal sets the basic compression intensity—in other words, a stronger sidechain signal allows quieter audio signals to be compressed more. When you turn up the COMPRESS potentiometer, the op-amp’s gain increases, so the signal becomes more compressed. This is because the signal ultimately controls the FET gate. As the voltage rises, the FET’s channel opens wider (Vgs moves closer to 0 from a negative value), which weakens the audio signal—since the channel connects to ground.
 
 As you follow the path, you'll notice a split: one line goes to an inverting op-amp, the other directly to D2. At first, this structure might seem confusing. But after some thought, I figured out why it’s designed this way. It would be much easier to explain with a diagram.
 
@@ -186,3 +186,15 @@ Digging deeper into the JFET behavior, I found that the devices I used had lower
 To fix this, I tried replacing the trimpot from 10 kΩ to 50 kΩ, so the voltage could be pulled up higher. But it didn’t work—because the Idss was simply too low, I had to raise the trimpot to a much higher resistance (around 30–40 kΩ). At that point, the unwanted compression (signal flowing into ground) stopped, but as a side effect, the current hardly flowed at all, so compression itself no longer occurred.
 
 I ordered more JFETs hoping to find ones with proper Idss, but that batch also turned out weak. Fortunately, I eventually found a suitable JFET in my inventory with sufficient Idss. Since it was a different model, its Vgs(off) was different, which resulted in a different compression intensity. Still, when I tried it, it worked quite well.
+
+## Completion, demonstration
+Here is final product. I painted it, and labeled parameters with waterslide decal, which I printed. Also I put silver knobs on it. Below is a photo of final product.
+
+<p align='center'>
+ <img src=asset/FP.jpg width="50%" height="50%">
+</p>  
+
+---
+
+Now, demonstration. For convinience, I input saw wave -it is easy to identify its variation-. Also it is 2VPP, 500Hz, which is similar with guitar raw signal. I posted demo video link below. 
+
