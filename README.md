@@ -1,5 +1,5 @@
 ## Why I made this
-After finishing my RAT2 project, I built and even bought a few more pedals, but I still didn’t have a compressor pedal. The reason was simple: compressors tend to be deprioritized because they don’t reshape the sound dramatically—they mainly tame loud peaks and add a touch of sustain… or so I thought.
+After finishing my RAT2 project, I built and even bought a few more pedals, but I still didn’t have a compressor pedal. The reason was simple: compressors tend to be deprioritized because they don’t reshape the sound dramatically — they mainly tame loud peaks and add a touch of sustain… or so I thought.
 
 When I went deep into Jimi Hendrix’s recordings, I realized I needed a compressor. Even though he wasn’t known for using a compressor pedal, I thought it would help me imitate his sound more easily.
 
@@ -9,7 +9,7 @@ First, I wanted independent attack and release controls to get a truly controlle
 
 Second, I wanted a compressor versatile enough for both guitar and bass. For that, a dry/wet mix (parallel compression) is extremely useful. On bass, loud low frequencies can make a compressor clamp down so hard that the overall volume briefly dips after a strong note and then swells back — an audible “breathing” effect often called pumping. Blending in some dry signal keeps the original attack and reduces that dip-and-swell.
 
-For these reasons—mainly cost-effectiveness and control over the feature set—I decided to build a compressor myself. I searched the internet for reference schematics and ultimately chose a design from PedalPCB as my starting point.
+For these reasons —mainly cost-effectiveness and control over the feature set— I decided to build a compressor myself. I searched the internet for reference schematics and ultimately chose a design from PedalPCB as my starting point.
 
 
 ## Circuit overview
