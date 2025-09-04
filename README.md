@@ -211,4 +211,6 @@ In this video, you might have noticed how the parameters affect the signal, but 
 Why does it seem that a higher compress knob setting causes less compression? Because once a signal level is above a certain threshold, it is compressed in proportion to its amplitude. Earlier I briefly explained how the threshold is defined. Therefore, if 90% of a signal is above the threshold, that 90% retains the same relative differences as in the original (non-compressed) signal.
 
 ## Conclusion
+Even there was no modification(unlike RAT2 projetct), it was hard to complete final work. Especially, this point was hard: this is essentially compressor, which don't reshape the sound completely. So it was hard to figuring out it is working or not, and what was problem. But, after I overcame problems, I was able to explain completely how sidechain, JFET works. Most importantly, I learned again. I can overcome problems unless I give up. 
 
+*Thanks for reading this far!*
