@@ -185,7 +185,7 @@ At first, I suspected a damaged MLCC decoupling capacitor leaking to ground, so 
 
 Digging deeper into the JFET behavior, I found that the devices I used had lower Idss than expected. With such low Idss, the JFET couldn’t generate enough source voltage, so its channel wouldn’t fully close. As a result, the audio signal kept bleeding into ground.
 
-To fix this, I tried replacing the trimpot from 10 kΩ to 50 kΩ, so the voltage could be pulled up higher. But it didn’t work—because the Idss was simply too low, I had to raise the trimpot to a much higher resistance (around 30–40 kΩ). At that point, the unwanted compression (signal flowing into ground) stopped, but as a side effect, the current hardly flowed at all, so compression itself no longer occurred.
+To fix this, I tried replacing the trimpot from 10 kΩ to 50 kΩ, so the voltage could be pulled up higher. But it didn’t work—because the Idss was simply too low, I had to raise the trimpot to a much higher resistance (around 30–40 kΩ). At that point, the unwanted compression (signal flowing into ground) stopped, but as a side effect, the current hardly flowed at all, so the compression itself no longer worked.
 
 I ordered more JFETs hoping to find ones with proper Idss, but that batch also turned out weak. Fortunately, I eventually found a suitable JFET in my inventory with sufficient Idss. Since it was a different model, its Vgs(off) was different, which resulted in a different compression intensity. Still, when I tried it, it worked quite well.
 
