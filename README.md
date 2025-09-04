@@ -104,6 +104,7 @@ Because this feedback path reacts faster than the main sidechain. The sidechain 
 Most of this schematic is identical to the original. I only made a few minor edits — changing some resistor values to match the parts I had in stock and updating the op-amp numbering.
 I also added subboard designs for the audio jacks and footswitch.
 Initially, I followed the same op-amp numbering as in the original, but that changed during PCB layout work. I’ll go into more detail about that later.
+
 ### PCB layout Creation 
 
 This circuit has a lot of components, and since I didn’t want to use a larger enclosure, I decided to design it using SMD components. I was also curious to see whether I could solder SMD parts neatly.
