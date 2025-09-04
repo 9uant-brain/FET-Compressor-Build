@@ -213,4 +213,4 @@ Why does it seem that a higher compress knob setting causes less compression? Be
 ## Conclusion
 Even there was no modification(unlike RAT2 projetct), it was hard to complete final work. Especially, this point was hard: this is essentially compressor, which don't reshape the sound completely. So it was hard to figuring out it is working or not, and what was problem. But, after I overcame problems, I was able to explain completely how sidechain, JFET works. Most importantly, I learned again. I can overcome problems unless I give up. 
 
-###**Thanks for reading this far!**###
+### **Thanks for reading this far!** 
