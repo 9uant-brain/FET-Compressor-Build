@@ -5,7 +5,7 @@ When I went deep into Jimi Hendrix’s recordings, I realized I needed a compres
 
 I could have just bought a low-cost pedal, but I decided to build my own instead. There were several reasons for that choice.
 
-First, I wanted independent attack and release controls to get a truly clean, controlled tone—and even among budget pedals, that exact feature set is uncommon.
+First, I wanted independent attack and release controls to get a truly controlled tone — and even among budget pedals, that exact feature set is uncommon.
 
 Second, I wanted a compressor versatile enough for both guitar and bass. For that, a dry/wet mix (parallel compression) is extremely useful. On bass, loud low frequencies can make a compressor clamp down so hard that the overall volume briefly dips after a strong note and then swells back — an audible “breathing” effect often called pumping. Blending in some dry signal keeps the original attack and reduces that dip-and-swell.
 
