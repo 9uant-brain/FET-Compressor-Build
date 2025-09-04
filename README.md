@@ -110,7 +110,6 @@ Initially, I followed the same op-amp numbering as in the original, but that cha
 This circuit has a lot of components, and since I didn’t want to use a larger enclosure, I decided to design it using SMD components. I was also curious to see whether I could solder SMD parts neatly.
 I’ll first explain the older design, and then go over the revised version.
 
------
 
 <p align='center'>
  <img src=asset/PCB1.png width="70%" height="70%">
