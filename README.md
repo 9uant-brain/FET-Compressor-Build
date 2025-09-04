@@ -83,7 +83,7 @@ Q2 may seem less important than Q1, as it doesn't directly touch the signal path
 
 When it comes to voltage stabilization, both Q2 and capacitor C7 are involved. C7 absorbs AC fluctuations at Q1’s source, helping the gate voltage (Vg) directly control the channel conductance. But C7 has high impedance at low frequencies and struggles to suppress slow fluctuations. That’s where Q2 comes into play.
 
-Under normal conditions, a constant drain current (Id) flows through Q2. Since Q2 operates in a self-bias configuration, its source voltage (Vs) varies dynamically as Id changes — per Ohm's Law (V = IR), current through R13 generates a voltage drop that defines Vs. Vs determines Vgs, which in turn governs how open the JFET channel is. For clarity, let’s call Q2’s source node “Node B.”
+Under normal conditions, a constant drain current (Id) flows through Q2. Since Q2 operates in a self-bias configuration, its source voltage (Vs) varies dynamically as Id changes — per Ohm's Law (V = IR). Current through R13 generates a voltage drop that defines Vs, which determines Vgs, which in turn governs how open the JFET channel is. For clarity, let’s call Q2’s source node “Node B.”
 
 Now let’s walk through what happens during a signal peak.
 
