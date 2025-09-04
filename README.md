@@ -1,7 +1,7 @@
 ## Why I made this
 After finishing my RAT2 project, I built and even bought a few more pedals, but I still didn’t have a compressor pedal. The reason was simple: compressors tend to be deprioritized because they don’t reshape the sound dramatically—they mainly tame loud peaks and add a touch of sustain… or so I thought.
 
-When I went deep into Jimi Hendrix’s recordings, I realized I needed a compressor. He wasn’t known for using a compressor pedal, but the combination of natural amp compression and studio processing on those tracks contributes to that sophisticated yet raw electric guitar tone I was chasing.
+When I went deep into Jimi Hendrix’s recordings, I realized I needed a compressor. Even though he wasn’t known for using a compressor pedal, I thought it would help me imitate his sound more easily.
 
 I could have just bought a low-cost pedal, but I decided to build my own instead. There were several reasons for that choice.
 
