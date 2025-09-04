@@ -25,7 +25,8 @@ So, I can explain this schematic same way. I highlighted that section which is c
 
 Maybe your first impression was, "This is quite a bit more complicated than the RAT2." And that's understandable—after all, the sidechain involves both detection and a self-feedback mechanism. Let me explain it briefly.
 
-First, focus on IC2.1. Its output splits into two paths: one goes to the audio output, while the other feeds the sidechain. The level of this sidechain signal sets the basic compression intensity—in other words, a stronger sidechain signal allows quieter audio signals to be compressed more. When you turn up the COMPRESS potentiometer, the op-amp’s gain increases, so the signal becomes more compressed. This is because the signal ultimately controls the FET gate. As the voltage rises, the FET’s channel opens wider (Vgs moves closer to 0 from a negative value), which weakens the audio signal—since the channel connects to ground.
+First, focus on IC2.1. Its output splits into two paths: one goes to the audio output, while the other feeds the sidechain. 
+The level of this sidechain signal sets the basic compression intensity—in other words, a stronger sidechain signal allows quieter audio signals to be compressed more. When you turn up the COMPRESS potentiometer, the op-amp’s gain increases, so the signal becomes more compressed. This is because the signal ultimately controls the FET gate. As the voltage rises, the FET’s channel opens wider (Vgs moves closer to 0 from a negative value), which weakens the audio signal—since the channel connects to ground.
 
 As you follow the path, you'll notice a split: one line goes to an inverting op-amp, the other directly to D2. At first, this structure might seem confusing. But after some thought, I figured out why it’s designed this way. It would be much easier to explain with a diagram.
 
