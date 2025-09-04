@@ -67,7 +67,7 @@ In this section, we'll focus on how quickly that voltage is charged and discharg
 <p align='center'>
  <img src=asset/constant.png width="60%" height="60%"> 
 </p>  
-To make it clearer, I simplified the previous schematic. The 'ATTACK' resistance determines how fast C6 charges, and the 'RELEASE' resistance determines how fast C6 discharges. If C6 charges quickly, the FET reacts faster and compresses the signal more quickly.
+To make it clearer, I simplified the previous schematic. The 'ATTACK' resistance determines how fast C6 charges, and the 'RELEASE' resistance determines how fast C6 discharges. If C6 charges quickly, the JFET reacts faster and compresses the signal more quickly.
 
 These are the core timing parameters of a compressor. For example, attack time refers to how fast the circuit responds to a transient spike, while release time describes how quickly the circuit returns to normal after that spike.
 
