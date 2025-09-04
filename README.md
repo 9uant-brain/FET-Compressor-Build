@@ -38,13 +38,13 @@ As you follow the path, you'll notice a split: one line goes to an inverting op-
 
 Let's assume the audio input is a sine wave. That sine wave also travels through the sidechain path — we'll call that waveform A. A is then inverted through an inverting op-amp, becoming waveform B. When B passes through a diode, it becomes waveform C, since diodes only allow voltages above their forward voltage (VF) to pass — anything below VF is clipped.
 
-The same thing happens with waveform D, except this time it's waveform A (not B) that's being clipped. Then, C and D are merged into waveform E at a common node. This final waveform E is what goes to the FET gate.
+The same thing happens with waveform D, except this time it's waveform A (not B) that's being clipped. Then, C and D are merged into waveform E at a common node. This final waveform E is what goes to the JFET gate.
 
 In effect, this functions as a kind of rectifier. But why is this structure necessary?
 
-Imagine we directly control the FET gate with waveform A. In that case, only the upper half of the wave would cause compression (i.e., open the FET channel). That’s because a JFET opens wider when Vgs gets closer to 0. Since the lower half of the sine wave is already negative, it would actually close the channel rather than open it. That’s why converting waveform A into waveform E is essential — it ensures the gate receives a proper, unipolar control signal.
+Imagine we directly control the JFET gate with waveform A. In that case, only the upper half of the wave would cause compression (i.e., open the JFET channel). That’s because a JFET opens wider when Vgs gets closer to 0. Since the lower half of the sine wave is already negative, it would actually close the channel rather than open it. That’s why converting waveform A into waveform E is essential — it ensures the gate receives a proper, unipolar control signal.
 
-Also, BAT43 diodes are used not only for rectification, but because they have a low forward voltage. If VF were too high, much of the signal would be lost — and the FET only responds to relatively high gate signals.
+Also, BAT43 diodes are used not only for rectification, but because they have a low forward voltage. If VF were too high, much of the signal would be lost — and the JFET only responds to relatively high gate signals.
 
 I also measured the rectified output to observe its actual shape — the captured waveform is shown below.
 
@@ -61,7 +61,7 @@ I also measured the rectified output to observe its actual shape — the capture
 Look at the schematic — I’ve highlighted some essential components.
 Now, let’s talk about time, because the ‘attack’ and ‘release’ potentiometers control exactly that — technically, the time constant.
 
-Earlier, we discussed how the FET gate voltage is sourced and transformed.
+Earlier, we discussed how the JFET gate voltage is sourced and transformed.
 In this section, we'll focus on how quickly that voltage is charged and discharged.
 
 <p align='center'>
